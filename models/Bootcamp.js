@@ -25,7 +25,7 @@ const BootcampSchema = new mongoose.Schema({
         type: String,
         maxLength: [20, "Phone number cannot be longer than 20 character"],
     },
-    mail: {
+    email: {
         type: String,
         match: [
             /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
@@ -97,3 +97,5 @@ const BootcampSchema = new mongoose.Schema({
         default: Date.now,
     },
 });
+
+module.exports = Bootcamp = mongoose.model("bootcamp", BootcampSchema);
